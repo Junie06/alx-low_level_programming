@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("%d\n", 0);
+		;
 	}
 
 	for (i = 1; argv[i]; i++)
