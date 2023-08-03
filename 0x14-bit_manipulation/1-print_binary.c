@@ -21,6 +21,6 @@ void print_binary(unsigned long int n)
 	{
 		/* extract the i-th bit*/
 		bits = (n >> i) & 1;
-		_putchar(bit ? '1' : '0');
+		_putchar(bits ? '1' : '0');
 	}
 }
