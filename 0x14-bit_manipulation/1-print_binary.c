@@ -1,8 +1,17 @@
+#include "main.h"
+
+/**
+ * print_binary - function that converts a decimal to binary
+ * @n: value passed as argument
+ * Return: the converted  value else 0
+ */
+
 void print_binary(unsigned long int n)
 {
 	int i, bits;
 
-	/* calculates the size of the data
+	/**
+	  *calculates the size of the data
 	   * type in bytes and coverts it to
 	   * number of bits
 	   */
