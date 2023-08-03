@@ -8,7 +8,7 @@
 
 void print_binary(unsigned long int n)
 {
-	int i, bits;
+	int i, bits, lead_zero = 1;
 
 	/**
 	  *calculates the size of the data
@@ -21,6 +21,17 @@ void print_binary(unsigned long int n)
 	{
 		/* extract the i-th bit*/
 		bits = (n >> i) & 1;
-		_putchar(bits ? '1' : '0');
+		
+		if (bits)
+		{
+			lead_zero = 0;
+			_putchar('1');
+		}
+		else if (!lead_zero)
+		{
+			_putchar('0');
+		}
 	}
+	if (lead_zero)
+	_putchar('0');
 }
