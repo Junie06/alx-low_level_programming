@@ -24,7 +24,7 @@ void exitError(const char *message, int exitCode)
 int main(int argc, char *argv[])
 {
 	ssize_t from_fd, to_fd;
-	char *buff;
+	char *buff[1024];
 	ssize_t bytes, bytes_written;
 	char *file_from = argv[1];
 	char *file_to = argv[2];
@@ -48,7 +48,6 @@ int main(int argc, char *argv[])
 	while ((bytes = read(from_fd, buff, sizeof(buff))) > 0)
 	{
 		bytes_written = write(to_fd, buff, bytes);
-		free(buff);
 		if (bytes_written != bytes || bytes_written == -1)
 		{
 			close(from_fd);
