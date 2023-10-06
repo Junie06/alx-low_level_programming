@@ -22,8 +22,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	return (0);
 
 	key_copy = strdup(key);
-	if (!key_copy)i
-		free(new_node);
+	if (!key_copy)
+		free(key_copy);
 	return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
